@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+    background-color: #1a202c; /* 暗色背景 */
+    color: #e2e8f0; /* 暗色文本 */
+  }
+  
+  .light {
+    background-color: #ffffff; /* 亮色背景 */
+    color: #333333; /* 亮色文本 */
+  }

@@ -1,0 +1,9 @@
+semi: true # 代码行末使用分号
+singleQuote: true # 使用单引号
+trailingComma: es5 # ES5 兼容的尾随逗号
+tabWidth: 2 # 每个缩进级别使用 2 个空格
+useTabs: false # 使用空格代替 Tab
+printWidth: 80 # 每行最大字符数为 80
+bracketSpacing: true # 在对象字面量的括号内添加空格
+arrowParens: always # 箭头函数的参数始终使用括号
+endOfLine: lf # 统一使用 LF 作为换行符

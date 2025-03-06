@@ -1,0 +1,29 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# 根目录
+root = true
+
+# 适用于所有文件
+[*]
+indent_style = space          # 使用空格进行缩进
+indent_size = 2               # 每个缩进级别使用 2 个空格
+end_of_line = lf              # 使用换行符 (LF) 作为行尾符号
+charset = utf-8               # 使用 UTF-8 字符编码
+trim_trailing_whitespace = true  # 删除行尾的空白字符
+insert_final_newline = true     # 在文件末尾插入一个换行符
+
+# 适用于所有 .js 和 .ts 文件
+[*.{js,ts}]
+max_line_length = 240          # 限制每行最大字符数为 240
+
+# 适用于所有 .css, .scss 和 .html 文件
+[*.{css,scss,html}]
+indent_size = 2               # 每个缩进级别使用 2 个空格
+
+# 适用于所有 .json 文件
+[*.json]
+indent_size = 2               # 使用 2 个空格进行缩进
+
+# 适用于所有 .yml 和 .yaml 文件
+[*.{yml,yaml}]
+indent_size = 2               # 使用 2 个空格进行缩进
