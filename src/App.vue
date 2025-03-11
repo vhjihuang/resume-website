@@ -90,16 +90,29 @@ onMounted(() => {
 
     <!-- 内容区域 -->
     <div class="mx-auto">
-      <div class="py-3 h-full relative z-10 title bg-transparent bg-custom-gradient bg-1200 animate-gradient text-light min-h-screen flex align-content-center align-items-center flex-wrap m-0">
+      <div class="py-3 h-full relative z-10 title bg-transparent bg-custom-gradient bg-1200 animate-gradient text-light min-h-screen flex items-center justify-center flex-wrap m-0">
         <StarBackground />
-        <div class="z-30 max-w-7xl py-12 mx-auto w-full">
+        <div class="container z-30 max-w-7xl py-12 mx-auto w-full">
           <h1 class="md:text-[6rem] text-[3rem] mb-2 text-center">Huang Hao Jie</h1>
           <div class="font-light text-[1.25rem] min-h-16 md:min-h-10 text-center"><TypeWriter text="Passionate about changing the world with technology." :infinite="true"
             :speed="80" /></div>
           <div class="p-12">
-            <a v-for="i in icons" :href="i.url" class="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700"><i class="fa-solid fa-bars text-xl fa-brands" :class="i.image" ></i></a>
+            <a v-for="i in icons" :href="i.url" class="text-white px-6 py-3"><i class="fa-solid text-white fa-bars hover:text-black text-[3em] fa-brands" :class="i.image" ></i></a>
           </div>
-          <a href="#about" class="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700">Get to know me</a>
+          <a href="#about" class="text-white border-solid border-white border-[1px] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 hover:text-black">Get to know me</a>
+        </div>
+      </div>
+      <div class="bg-[#E6E9EC] w-full flex items-center justify-center py-4 m-0">
+        <div class="container py-12">
+          <div class="flex mx-auto w-full text-black flex-wrap">
+            <div class="w-5/12 hidden md:block px-4">
+              <img src="https://avatars.githubusercontent.com/u/37236608?v=4" alt="avatar" width="375" height="375" class="rounded-[50%] mx-auto" />
+            </div>
+            <div class="md:w-7/12 w-full">
+              <h2>About Me</h2>
+              <p>My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.</p>
+            </div>
+          </div>
         </div>
       </div>
       <AboutMe class="mb-8 md:mb-16" />
@@ -113,11 +126,6 @@ onMounted(() => {
 <style scoped>
 /* 使用 Tailwind 的 dark 模式类 */
 
-/* 容器样式 */
-.container {
-  max-width: 1200px; /* 最大宽度 */
-  margin: 0 auto; /* 居中 */
-}
 
 /* 可选：增加全局过渡效果 */
 body {
