@@ -2,12 +2,14 @@
 import { useThemeStore } from '@/stores/theme'
 import { defineAsyncComponent, onMounted, ref, watchEffect } from 'vue'
 import { ElContainer } from 'element-plus'
+import { useMyI18n } from "@/composables/useMyI18n";
 
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/display.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 const themeStore = useThemeStore()
+const { i18n } = useMyI18n();
 
 // 动态加载组件
 const AboutMe = defineAsyncComponent({
@@ -103,14 +105,15 @@ onMounted(() => {
         </div>
       </div>
       <div class="bg-[#E6E9EC] w-full flex items-center justify-center py-4 m-0">
-        <div class="container py-12">
+        <div class="container py-12 px-4">
           <div class="flex mx-auto w-full text-black flex-wrap">
-            <div class="w-5/12 hidden md:block px-4">
+            <div class="w-5/12 items-center hidden lg:block lg:items-center px-4">
               <img src="https://avatars.githubusercontent.com/u/37236608?v=4" alt="avatar" width="375" height="375" class="rounded-[50%] mx-auto" />
             </div>
-            <div class="md:w-7/12 w-full">
-              <h2>About Me</h2>
-              <p>My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.</p>
+            <div class="lg:w-7/12 w-full">
+              <h2 class="	text-6xl font-light mb-12">About Me</h2>
+              <p class="text-xl font-light mb-4">{{i18n.t("about.me")}}</p>
+              <p><a href="#" class="inline-block px-6 py-3 text-black rounded-lg shadow-md hover:bg-[#212529] hover:text-white">Resume</a></p>
             </div>
           </div>
         </div>

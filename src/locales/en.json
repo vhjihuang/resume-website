@@ -5,5 +5,8 @@
       "about": "About",
       "skills": "Skills",
       "contact": "Contact"
+    },
+    "about": {
+      "me": "Hi, I'm Haojie Huang, a passionate front-end developer transitioning into full-stack development. With a strong foundation in Vue 3, TypeScript, and modern web technologies, I enjoy building clean, scalable, and user-friendly applications. Currently, I'm expanding my expertise in backend technologies to become a well-rounded developer. I have a keen interest in open-source projects and love experimenting with new tools and frameworks. In my free time, I work on personal projects, continuously refining my skills and exploring innovative solutions."
     }
   }
