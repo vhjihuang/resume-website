@@ -111,9 +111,33 @@ onMounted(() => {
               <img src="https://avatars.githubusercontent.com/u/37236608?v=4" alt="avatar" width="375" height="375" class="rounded-[50%] mx-auto" />
             </div>
             <div class="lg:w-7/12 w-full">
-              <h2 class="	text-6xl font-light mb-12">About Me</h2>
+              <h2 class="text-6xl font-light mb-12">About Me</h2>
               <p class="text-xl font-light mb-4">{{i18n.t("about.me")}}</p>
               <p><a href="#" class="inline-block px-6 py-3 text-black rounded-lg shadow-md hover:bg-[#212529] hover:text-white">Resume</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-[#F7F8F9] w-full flex items-center justify-center py-4 m-0">
+        <div class="container py-12 px-4">
+          <div class="flex mx-auto w-full text-black flex-wrap">
+            <h2 class="block w-full text-center text-6xl font-light pb-12">Recent Projects</h2>
+            <div class="row flex mx-auto w-full text-black flex-wrap">
+              <div class="col w-full lg:w-1/2 px-4">
+                <div class="card p-4 mb-12 bg-white transition duration-300 ease-in-out hover:shadow-lg hover:scale-105 rounded-md">
+                  <div class="card-body text-left flex-1 p-4">
+                    <h5 class="mb-2">home</h5>
+                    <p class="mb-4">内容</p>
+                    <div class="flex gap-2">
+                      <a href="#" class="border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white px-4 py-2 rounded mx-2"><i class="fa-bars fa-brands fa-github"></i> Clone Project</a>
+                      <a href="#" class="border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white px-4 py-2 rounded mx-2"><i class="fa-bars fa-brands fa-github"></i> Repo</a>
+                    </div>
+                    <hr class="my-4">
+                    <div class="pb-4">Languages: <a href="#"><span class="bg-[#F7F8F9] px-[0.45em] py-[0.25em]">{{`${'JavaScript'}: ${54}%`}}</span></a></div>
+                    <div><i class="fa-bars fa-brands fa-github"></i> Stars</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
