@@ -50,6 +50,11 @@ const TypeWriter = defineAsyncComponent({
   loadingComponent: { template: '<div>加载中...</div>' }
 })
 
+const newSkills = defineAsyncComponent({
+  loader: () => import('@/components/newSkills.vue'),
+  loadingComponent: { template: '<div>加载中...</div>' }
+})
+
 interface Icons {
   image: string,
   url: string,
@@ -133,13 +138,21 @@ onMounted(() => {
                       <a href="#" class="border border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white px-4 py-2 rounded mx-2"><i class="fa-bars fa-brands fa-github"></i> Repo</a>
                     </div>
                     <hr class="my-4">
-                    <div class="pb-4">Languages: <a href="#"><span class="bg-[#F7F8F9] px-[0.45em] py-[0.25em]">{{`${'JavaScript'}: ${54}%`}}</span></a></div>
-                    <div><i class="fa-bars fa-brands fa-github"></i> Stars</div>
+                    <div class="pb-4">Languages: 
+                      <a href="#" class="rounded-lg"><span class="bg-[#F7F8F9] text-[0.875rem]  px-[0.5rem] py-1">{{`${'JavaScript'}: ${54}%`}}</span></a>
+                      <a href="#" class="rounded-lg ml-4"><span class="bg-[#F7F8F9] text-base px-[0.5rem] py-1">{{`${'HTML'}: ${54}%`}}</span></a>
+                    </div>
+                    <div><a href="#"><i class="fa-bars fa-brands fa-github"></i> Stars <span class="ml-2 px-2 py-1">1142</span></a><small>update</small></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="bg-white w-full flex items-center justify-center py-4 m-0">
+        <div class="container py-12 px-4">
+          <newSkills />
         </div>
       </div>
       <AboutMe class="mb-8 md:mb-16" />
