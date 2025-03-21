@@ -1,41 +1,41 @@
 <template>
-  <div class="w-full flex items-center justify-center py-12 bg-gray-100">
+  <div class="w-full flex items-center justify-center py-12">
     <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center text-black mb-8 pb-12">Skills</h2>
+      <h2 class="text-6xl text-center text-black mb-8 pb-12">Skills</h2>
 
-      <div class="flex justify-center mb-8">
-        <button
+      <div class="flex justify-center w-full mb-8">
+        <div
           @click="switchTab('technical')"
           :class="[
-            'px-6 py-2 rounded-lg font-medium',
+            'flex-1 px-6 py-2 font-medium',
             activeTab === 'technical'
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
+              ? 'text-blue-400 border-x border-t rounded-t-md'
+              : 'text-black border-b',
           ]"
         >
           Technical Skills
-        </button>
-        <button
+        </div>
+        <div
           @click="switchTab('soft')"
           :class="[
-            'px-6 py-2 rounded-lg ml-4 font-medium',
+            'flex-1 px-6 py-2 font-medium',
             activeTab === 'soft'
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300',
+              ? ' text-blue-400 border-x border-t rounded-t-md'
+              : 'text-black border-b',
           ]"
         >
           Soft Skills
-        </button>
+        </div>
       </div>
 
       <div class="grid gap-8">
-        <div v-if="activeTab === 'technical'" class="p-6 rounded-lg shadow-md">
+        <div v-if="activeTab === 'technical'" class="rounded-lg">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div v-for="skill in technicalSkills" :key="skill.name" class="mb-6">
               <p class="text-lg font-medium text-gray-800 mb-2">{{ skill.name }}</p>
-              <div class="w-full h-6 rounded-full bg-gray-200">
+              <div class="w-full h-4 rounded-full bg-gray-200">
                 <div
-                  class="bg-blue-600 h-6 rounded-full transition-all duration-500"
+                  class="bg-blue-600 h-4 rounded-full transition-all duration-500"
                   :style="{ width: skill.level + '%' }"
                 ></div>
               </div>
@@ -47,9 +47,9 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div v-for="skill in softSkills" :key="skill.name" class="mb-6">
               <p class="text-lg font-medium text-gray-800 mb-2">{{ skill.name }}</p>
-              <div class="w-full h-6 rounded-full bg-gray-200">
+              <div class="w-full h-4 rounded-full bg-gray-200">
                 <div
-                  class="bg-blue-600 h-6 rounded-full transition-all duration-500"
+                  class="bg-blue-600 h-4 rounded-full transition-all duration-500"
                   :style="{ width: skill.level + '%' }"
                 ></div>
               </div>
