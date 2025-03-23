@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex items-center justify-center py-12">
     <div class="container mx-auto">
-      <h2 class="text-6xl text-center text-black mb-8 pb-12">Skills</h2>
+      <h2 class="text-5xl text-center text-black mb-8 pb-12">Skills</h2>
 
       <div class="flex justify-center w-full mb-8">
         <div
@@ -30,9 +30,9 @@
 
       <div class="grid gap-8">
         <div v-if="activeTab === 'technical'" class="rounded-lg">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div v-for="skill in technicalSkills" :key="skill.name" class="mb-6">
-              <p class="text-lg font-medium text-gray-800 mb-2">{{ skill.name }}</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div v-for="skill in technicalSkills" :key="skill.name">
+              <p class="text-lg text-left font-medium text-gray-800 mb-2">{{ skill.name }}</p>
               <div class="w-full h-4 rounded-full bg-gray-200">
                 <div
                   class="bg-blue-600 h-4 rounded-full transition-all duration-500"
@@ -43,10 +43,10 @@
           </div>
         </div>
 
-        <div v-else-if="activeTab === 'soft'" class="p-6 rounded-lg shadow-md">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div v-for="skill in softSkills" :key="skill.name" class="mb-6">
-              <p class="text-lg font-medium text-gray-800 mb-2">{{ skill.name }}</p>
+        <div v-else-if="activeTab === 'soft'" class="rounded-lg">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div v-for="skill in softSkills" :key="skill.name">
+              <p class="text-lg text-left font-medium text-gray-800 mb-2">{{ skill.name }}</p>
               <div class="w-full h-4 rounded-full bg-gray-200">
                 <div
                   class="bg-blue-600 h-4 rounded-full transition-all duration-500"

@@ -24,10 +24,8 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Skills: typeof import('./src/components/Skills.vue')['default']
     StarBackground: typeof import('./src/components/StarBackground.vue')['default']
-    TestMenu: typeof import('./src/components/testMenu.vue')['default']
     ThemeToggle: typeof import('./src/components/ThemeToggle.vue')['default']
     TopMenu: typeof import('./src/components/TopMenu.vue')['default']
-    TypeWrite: typeof import('./src/components/TypeWrite.vue')['default']
     TypeWriter: typeof import('./src/components/TypeWriter.vue')['default']
   }
 }
