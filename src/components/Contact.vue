@@ -6,10 +6,10 @@ interface Icons {
 }
 const icons = ref<Icons[]>([
   { image: 'fa-github', url: 'https:github.com/vhjihuang' },
-  { image: 'fa-facebook', url: '#' },
+  { image: 'fa-facebook', url: 'https://www.facebook.com/profile.php?id=61573768566491' },
   { image: 'fa-instagram', url: '#' },
   { image: 'fa-linkedin', url: '#' },
-  { image: 'fa-discord', url: '#' }
+  { image: 'fa-discord', url: 'https://discord.gg/FY9nY2ChUf' }
 ])
 
 const scrollToSection = (id: string) => {
