@@ -41,10 +41,10 @@ onMounted(() => {
 
     <!-- 内容区域 -->
     <div class="mx-auto">
-      <Contact />
-      <AboutMe />
-      <Projects />
-      <Skills />
+      <Contact id="contact" />
+      <AboutMe id="about-me" />
+      <Projects id="projects" />
+      <Skills id="skills" />
       <footer class="bg-[#F7F8F9] w-full flex items-center justify-center py-12 m-0">
         <div class="container px-4 text-black">
           <h2 class="pb-4 text-6xl mb-[0.5rem]">Get In Touch</h2>

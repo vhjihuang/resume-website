@@ -5,12 +5,19 @@ interface Icons {
   url: string,
 }
 const icons = ref<Icons[]>([
-  { image: 'fa-github', url: '#' },
+  { image: 'fa-github', url: 'https:github.com/vhjihuang' },
   { image: 'fa-facebook', url: '#' },
   { image: 'fa-instagram', url: '#' },
   { image: 'fa-linkedin', url: '#' },
   { image: 'fa-discord', url: '#' }
 ])
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <template>
@@ -23,11 +30,11 @@ const icons = ref<Icons[]>([
         <TypeWriter text="Passionate about changing the world with technology." :infinite="true" :speed="80" />
       </div>
       <div class="p-12">
-        <a v-for="i in icons" :href="i.url" class="text-white px-2 py-3"><i
+        <a v-for="i in icons" :href="i.url" target="_blank" class="text-white px-2 py-3"><i
             class="fa-solid text-white fa-bars hover:text-black text-[3em] fa-brands" :class="i.image"></i></a>
       </div>
       <a href="#about"
-        class="text-white border-solid border-white border-[1px] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 hover:text-black">Get
+        class="text-white border-solid border-white border-[1px] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 hover:text-black" @click.prevent="() => scrollToSection('about-me')">Get
         to know me</a>
     </div>
   </div>

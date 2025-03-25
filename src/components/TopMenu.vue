@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import throttle from "lodash.throttle";
+import { useMyI18n } from '@/composables/useMyI18n';
+const { i18n } = useMyI18n();
+
+const menuItems = [
+  { name: i18n.t('menu.projects'), path: '/#projects' },
+  { name: i18n.t('menu.about'), path: '/#about-me' },
+  { name: i18n.t('menu.contact'), path: '/#contact' },
+  { name: i18n.t('menu.skills'), path: '/#skills' },
+];
+
 
 const isMenuOpen = ref<boolean>(false);
 const isScrolled = ref<boolean>(false);
@@ -50,10 +60,7 @@ onBeforeUnmount(() => {
 
       <!-- 中间菜单 (PC 端显示) -->
       <ul class="hidden md:flex space-x-6">
-        <li><router-link to="/" class="hover:text-gray-300">首页</router-link></li>
-        <li><router-link to="/" class="hover:text-gray-300">关于</router-link></li>
-        <li><router-link to="/" class="hover:text-gray-300">服务</router-link></li>
-        <li><router-link to="/" class="hover:text-gray-300">联系</router-link></li>
+        <li v-for="(item, i) in menuItems" :key="i"><router-link :to="item.path" class="hover:text-gray-300">{{ item.name }}</router-link></li>
       </ul>
 
       <!-- 右侧下拉菜单按钮 (移动端显示) -->
@@ -74,10 +81,7 @@ onBeforeUnmount(() => {
       <div v-show="isMenuOpen" class="md:hidden w-full overflow-hidden">
         <div class="container text-black mx-auto py-4">
           <ul class="flex flex-col items-start space-y-4">
-            <li><router-link to="/" class="hover:text-gray-300">首页</router-link></li>
-            <li><router-link to="/" class="hover:text-gray-300">关于</router-link></li>
-            <li><router-link to="/" class="hover:text-gray-300">服务</router-link></li>
-            <li><router-link to="/" class="hover:text-gray-300">联系</router-link></li>
+            <li v-for="(item, i) in menuItems" :key="i"><router-link :to="item.path" class="hover:text-gray-300">{{ item.name }}</router-link></li>
           </ul>
         </div>
       </div>
