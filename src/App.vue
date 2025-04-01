@@ -59,7 +59,7 @@ onMounted(() => {
           <a href="https:github.com/vhjihuang" class="text-blue-500"><span
               class="bg-black text-white  text-[0.75em] rounded-md px-[0.25rem] py-[0.25rem]">Huang Hao Jie</span></a>
           using
-          <i class="fa-brands fa-vuejs"></i>
+          <i class="fa-brands fa-vuejs text-[#42b983]"></i>
           <p><small class="text-[#6c757d]">
               Project code is open source. Feel free to fork and make your own version.
             </small></p>
