@@ -7,12 +7,13 @@ export interface Language {
 }
 
 export interface Project {
-  id: number | string; // 用于 v-for 的唯一 key
-  title: string; // 项目标题
-  description: string; // 项目描述
-  cloneUrl: string; // "克隆项目" 按钮的 URL (GitHub HTTPS/SSH 克隆链接)
-  repoUrl: string; // 指向 GitHub 仓库主页的 URL
-  languages: Language[]; // 语言数组
-  stars?: number; // 可选：Star 数量 (可以稍后获取)
-  lastUpdated: string; // 用于显示的日期字符串
+  id: number;
+  title: string;
+  description: string | null;
+  cloneUrl: string;
+  repoUrl: string;
+  lastUpdated: string;
+  stars: number;
+  forks: number;
+  languages: { name: string; percentage: number }[];
 }

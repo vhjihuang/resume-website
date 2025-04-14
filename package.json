@@ -13,6 +13,7 @@
     "@heroicons/vue": "^2.2.0",
     "@pinia/nuxt": "^0.10.1",
     "@vueuse/core": "^12.5.0",
+    "axios": "^1.8.4",
     "element-plus": "^2.9.5",
     "lodash.throttle": "^4.1.1",
     "pinia": "^3.0.1",
