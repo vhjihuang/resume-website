@@ -1,7 +1,7 @@
 import { ref, onMounted } from 'vue';
 import { getAllReposWithLangs } from '@/api/github';
 import { ElMessage } from 'element-plus';
-import  type { Project } from '@/types/index';
+import type { Project } from '@/types/index';
 
 export function useGithubRepos() {
   const repos = ref<Project[]>([]);

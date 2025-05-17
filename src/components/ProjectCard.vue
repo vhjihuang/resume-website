@@ -15,7 +15,7 @@
       </div>
       <hr class="my-4">
       <div class="pb-4">Languages:
-        <a v-for="(lang, index) in project.languages" :key="lang.name" href="javascript:void(0)"
+        <a v-for="(lang) in project.languages" :key="lang.name" href="javascript:void(0)"
           class="rounded-lg mr-2">
           <span class="bg-[#F7F8F9] text-[0.75em] px-[0.5rem] py-1">
             {{ `${lang.name}: ${lang.percentage}%` }}
