@@ -1,5 +1,5 @@
 import { ref, onMounted } from 'vue';
-import { getGithubRepos, getRepoLanguages, getAllReposWithLangs } from '@/api/github';
+import { getAllReposWithLangs } from '@/api/github';
 import { ElMessage } from 'element-plus';
 import  type { Project } from '@/types/index';
 

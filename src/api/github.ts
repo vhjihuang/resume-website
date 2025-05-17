@@ -1,7 +1,5 @@
 import api from './request';
 
-const GITHUB_USERNAME = 'vhjihuang'; // 替换成你的用户名
-
 // 获取用户的公开仓库
 export const getGithubRepos = () => {
   return api.get(`https://my-github-proxy.vercel.app/repos`);

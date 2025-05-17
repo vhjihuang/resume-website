@@ -25,7 +25,7 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       // 如果目标路由包含 hash（如 #section-id），滚动到对应的元素
       return {
