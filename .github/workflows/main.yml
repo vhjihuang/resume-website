@@ -15,8 +15,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          package-manager: 'pnpm'
+          node-version: '18' # 或你使用的 Node.js 版本
+          package-manager: npm # 先用 npm 安装 pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Check pnpm version
+        run: pnpm --version
 
       - name: Install dependencies
         run: pnpm install
