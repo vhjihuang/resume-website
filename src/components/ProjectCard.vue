@@ -26,9 +26,9 @@
     <div class="mt-auto text-left px-4">
       <div>
         <a href="javascript:void(0)">
-          <i class="fa-brands fa-github"></i> Stars <span class="ml-2 px-2 py-1">1142</span>
+          <i class="fa-brands fa-github"></i> Stars <span class="ml-2 px-2 py-1">{{ project.stars }}</span>
         </a>
-        <small>{{ project.lastUpdated }}</small>
+        <small>Update on {{ project.updated_at }}</small>
       </div>
     </div>
   </div>

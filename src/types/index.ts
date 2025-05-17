@@ -12,7 +12,7 @@ export interface Project {
   description: string | null;
   cloneUrl: string;
   repoUrl: string;
-  lastUpdated: string;
+  updated_at: string;
   stars: number;
   forks: number;
   languages: { name: string; percentage: number }[];
