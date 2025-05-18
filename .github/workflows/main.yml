@@ -9,29 +9,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # 或你使用的 Node.js 版本
-          package-manager: npm # 先用 npm 安装 pnpm
-
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Check pnpm version
-        run: pnpm --version
+          node-version: '18'
+          package-manager: pnpm # 直接使用 pnpm 支持
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Build project
         run: pnpm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
+          enable_git_info: true
