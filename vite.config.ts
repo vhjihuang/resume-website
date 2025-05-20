@@ -7,7 +7,12 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/resume-website/', // ⚠️ 替换为你的 GitHub 仓库名
+  base: process.env.NODE_ENV === 'production' 
+    ? '/resume-website/'  // GitHub Pages 需要仓库名前缀
+    : '/',                // 开发环境用根路径
+  build: {
+    outDir: 'dist'
+  },
   plugins: [
     vue(),
     AutoImport({
