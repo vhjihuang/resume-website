@@ -19,10 +19,10 @@ jobs:
           node-version: '18'
           cache: 'pnpm'
 
-      - name: 📦 Enable and install pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8 # 你也可以指定一个具体版本，例如 8.15.5
 
       - name: 📦 Install dependencies
         run: pnpm install
@@ -30,8 +30,11 @@ jobs:
       - name: 🔧 Build project
         run: pnpm run build
 
+      - name: 🧱 Copy index.html to 404.html
+        run: cp dist/index.html dist/404.html
+
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GH_PAT }}
+          github_token: ${{ secrets.GH_PAT }} # 确保你在仓库的 Secrets 设置了 GH_PAT
           publish_dir: dist
