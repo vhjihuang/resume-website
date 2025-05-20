@@ -6,8 +6,8 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist",
-        "installCommand": "npm install -g pnpm && pnpm install",
-        "buildCommand": "pnpm run build"
+        "installCommand": "cd /vercel/path0 && npm install -g pnpm && pnpm install",
+        "buildCommand": "cd /vercel/path0 && pnpm run build"
       }
     }
   ],
