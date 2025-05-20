@@ -7,6 +7,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/resume-website/', // ⚠️ 替换为你的 GitHub 仓库名
   plugins: [
     vue(),
     AutoImport({
@@ -18,8 +19,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      // Add the following line to the existing alias object
-      '@': path.resolve(__dirname, '/src'),
+      '@': path.resolve(__dirname, 'src'), // ⚠️ 这里应该是 'src'，不要加斜杠开头
     },
-  }
+  },
 })

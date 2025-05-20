@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    name: 'Concact',
+    name: 'Contcact',
     component: () => import('@/components/Contact.vue'),
   },
   {
