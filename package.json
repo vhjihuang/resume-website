@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
+    "build:gh": "DEPLOY_TARGET=GH_PAGES vite build",
     "preview": "vite preview",
-    "vercel-build": "npm install -g pnpm && pnpm install && pnpm build"
+    "vercel-build": "npm install -g pnpm && pnpm install && pnpm build",
+    "deploy": "pnpm build:gh && pnpm run gh-pages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
