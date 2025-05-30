@@ -7,10 +7,10 @@
                 class="rounded-[50%] mx-auto" />
             </div>
             <div class="lg:w-7/12 w-full">
-              <h2 class="text-6xl font-light mb-12">About Me</h2>
+              <h2 class="text-6xl font-light mb-12">{{ i18n.t("about.title") }}</h2>
               <p class="text-xl font-light mb-4">{{ i18n.t("about.me") }}</p>
               <p><a href="#"
-                  class="inline-block px-6 py-3 text-black rounded-lg shadow-md hover:bg-[#212529] hover:text-white">Resume</a>
+                  class="inline-block px-6 py-3 text-black rounded-lg shadow-md hover:bg-[#212529] hover:text-white">{{ i18n.t("resume") }}</a>
               </p>
             </div>
           </div>

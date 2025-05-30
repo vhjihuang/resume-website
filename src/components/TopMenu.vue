@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import throttle from "lodash.throttle";
 import { useMyI18n } from '@/composables/useMyI18n';
-const { i18n } = useMyI18n();
+const { i18n, setLocale } = useMyI18n();
 
 const menuItems = [
   { name: i18n.t('menu.projects'), path: '/#projects' },
@@ -17,6 +17,10 @@ const isScrolled = ref<boolean>(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
+};
+const setI8n = () => {
+  const lang = i18n.locale.value === 'en' ? 'zh' : 'en';
+  setLocale(lang);
 };
 
 // 节流滚动事件
@@ -63,6 +67,12 @@ onBeforeUnmount(() => {
         <li v-for="(item, i) in menuItems" :key="i"><router-link :to="item.path" class="hover:text-gray-300">{{ item.name }}</router-link></li>
       </ul>
 
+      <!-- 中英文切换按钮 -->
+      <div class="ml-auto hidden md:block">
+        <button @click="setI8n()" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+          {{ i18n.locale.value === 'en' ? '中文' : 'English' }}
+        </button>
+      </div>
       <!-- 右侧下拉菜单按钮 (移动端显示) -->
       <button
         @click="toggleMenu"

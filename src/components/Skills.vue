@@ -3,7 +3,7 @@
     <div class="container py-12 px-4">
       <div class="w-full flex items-center justify-center py-12">
         <div class="container mx-auto">
-          <h2 class="text-5xl text-center text-black mb-8 pb-12">Skills</h2>
+          <h2 class="text-5xl text-center text-black mb-8 pb-12">{{ i18n.t('skills') }}</h2>
 
           <div class="flex justify-center w-full mb-8">
             <div @click="switchTab('technical')" :class="[
@@ -57,6 +57,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useMyI18n } from '@/composables/useMyI18n';
+const { i18n } = useMyI18n();
 
 const activeTab = ref('technical');
 
