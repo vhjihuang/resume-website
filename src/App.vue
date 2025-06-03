@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/stores/theme'
 import { onMounted, watchEffect } from 'vue'
-// import { useMyI18n } from "@/composables/useMyI18n";
+import { useMyI18n } from "@/composables/useMyI18n";
 
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/display.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 const themeStore = useThemeStore()
-// const { i18n } = useMyI18n();
+const { i18n } = useMyI18n();
 
 watchEffect(() => {
   // 监听主题变化
@@ -46,11 +46,8 @@ onMounted(() => {
       <Skills id="skills" />
       <footer class="bg-[#F7F8F9] w-full flex items-center justify-center py-12 m-0">
         <div class="container px-4 text-black">
-          <h2 class="pb-4 text-6xl mb-[0.5rem]">Get In Touch</h2>
-          <p class="pb-4 mb-4">I'm currently looking for full-time Software Engineering or Machine Learning
-            opportunities! If you know of
-            any positions available, if you have any questions, or if you just want to say hi, please feel free to email
-            me at, <a href="mailto:vhjihuang@gmail.com" class="text-blue-500">vhjihuang@gmail.com.</a></p>
+          <h2 class="pb-4 text-6xl mb-[0.5rem]">{{ i18n.t('getInTouch') }}</h2>
+          <p class="pb-4 mb-4">{{ i18n.t('jobSeekingStatement') }}<a href="mailto:vhjihuang@gmail.com" class="text-blue-500">vhjihuang@gmail.com.</a></p>
           <i class="fa-solid fa-code"></i>
           with
           <i class="fa-solid fa-heart"></i>

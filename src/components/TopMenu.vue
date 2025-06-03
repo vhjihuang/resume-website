@@ -64,14 +64,14 @@ onBeforeUnmount(() => {
 
       <!-- 中间菜单 (PC 端显示) -->
       <ul class="hidden md:flex space-x-6">
-        <li v-for="(item, i) in menuItems" :key="i"><router-link :to="item.path" class="hover:text-gray-300">{{ i18n.t(`menu.${item.name}`) }}</router-link></li>
+        <li v-for="(item, i) in menuItems" :key="i"><router-link :to="item.path" class="hover:text-gray-500">{{ i18n.t(`menu.${item.name}`) }}</router-link></li>
       </ul>
 
       <!-- 中英文切换按钮 -->
       <div class="ml-auto hidden md:block">
-        <button @click="setI8n()" class="text-gray-600 hover:text-gray-800 focus:outline-none">
-          {{ i18n.locale.value === 'en' ? '中文' : 'English' }}
-        </button>
+        <div @click="setI8n()" class="focus:outline-none hover:text-gray-500 hover:border-none">
+          <i class="fa-solid fa-language text-2xl"></i>
+        </div>
       </div>
       <!-- 右侧下拉菜单按钮 (移动端显示) -->
       <button

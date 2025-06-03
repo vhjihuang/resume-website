@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useMyI18n } from '@/composables/useMyI18n';
+const { i18n } = useMyI18n();
 interface Icons {
   image: string,
   url: string,
@@ -34,8 +36,7 @@ const scrollToSection = (id: string) => {
             class="fa-solid text-white fa-bars hover:text-black text-[3em] fa-brands" :class="i.image"></i></a>
       </div>
       <a href="#about"
-        class="text-white border-solid border-white border-[1px] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 hover:text-black" @click.prevent="() => scrollToSection('about-me')">Get
-        to know me</a>
+        class="text-white border-solid border-white border-[1px] px-6 py-3 rounded-lg shadow-lg hover:bg-gray-50 hover:text-black" @click.prevent="() => scrollToSection('about-me')">{{ i18n.t('getToKnowMe') }}</a>
     </div>
   </div>
 </template>
