@@ -6,6 +6,7 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "name": "Haojie Huang",
   "resume": "Resume",
   "getToKnowMe": "Get to Know Me",
   "about": {
@@ -14,6 +15,12 @@
   },
   "recentProjects": "Recent Projects",
   "skills": "Skills",
+  "personal": {
+    "tagline": "Passionate about changing the world with technology."
+  },
   "getInTouch" : "Get In Touch",
-  "jobSeekingStatement": "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at,"
+  "jobSeekingStatement": "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at,",
+  "openSource": {
+    "description": "Project code is open source. Feel free to fork and make your own version."
+  }
 }

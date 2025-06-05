@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
+import { useMyI18n } from '@/composables/useMyI18n';
+const { i18n } = useMyI18n();
 const props = defineProps({
   text: { type: String, required: true },
   speed: { type: Number, default: 100 },
@@ -13,7 +14,7 @@ let isDeleting = false
 let index = 0
 
 function type() {
-  const fullText = props.text
+  const fullText = i18n.t(`${props.text}`)
   const current = isDeleting 
     ? fullText.substring(0, displayText.value.length - 1)
     : fullText.substring(0, displayText.value.length + 1)
